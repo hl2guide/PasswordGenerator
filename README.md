@@ -2,7 +2,7 @@
 
 ![Preview](https://raw.githubusercontent.com/hl2guide/PasswordGenerator/master/Screenshots/example.PNG)
 
-A tiny C# app for Windows that generates complex passwords.
+A tiny C# app for Windows that generates complex passwords for use in conjunction with a password manager (like LastPass or Dashlane).
 
 It targets and requires both Windows and the .NET Framework 4.8.
 
