@@ -7,7 +7,7 @@ A tiny C# WinForms app for Windows that generates complex passwords.
 ## Vital Notes
 
 * The generated passwords are not intended to be human-friendly or memorable
-* Generated password are complex, long and contain no words
+* The generated passwords are complex, long and contain no words
 * They are for use in conjunction with a password manager (like LastPass or Dashlane)
 
 ## Requirements
