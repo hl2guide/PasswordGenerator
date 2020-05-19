@@ -29,27 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.textBoxGeneratedPassword = new System.Windows.Forms.TextBox();
             this.trackBarLength = new System.Windows.Forms.TrackBar();
             this.labelLength = new System.Windows.Forms.Label();
             this.buttonGeneratePassword = new System.Windows.Forms.Button();
             this.buttonCopyPassword = new System.Windows.Forms.Button();
+            this.labelPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarLength)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBoxGeneratedPassword
-            // 
-            this.textBoxGeneratedPassword.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxGeneratedPassword.Font = new System.Drawing.Font("Monoid", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGeneratedPassword.Location = new System.Drawing.Point(8, 75);
-            this.textBoxGeneratedPassword.MaxLength = 70;
-            this.textBoxGeneratedPassword.Name = "textBoxGeneratedPassword";
-            this.textBoxGeneratedPassword.ReadOnly = true;
-            this.textBoxGeneratedPassword.Size = new System.Drawing.Size(958, 33);
-            this.textBoxGeneratedPassword.TabIndex = 2;
-            this.textBoxGeneratedPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxGeneratedPassword.Click += new System.EventHandler(this.textBoxGeneratedPassword_Click);
-            this.textBoxGeneratedPassword.Enter += new System.EventHandler(this.textBoxGeneratedPassword_Enter);
             // 
             // trackBarLength
             // 
@@ -95,13 +81,24 @@
             this.buttonCopyPassword.UseVisualStyleBackColor = false;
             this.buttonCopyPassword.Click += new System.EventHandler(this.buttonCopyPassword_Click);
             // 
+            // labelPassword
+            // 
+            this.labelPassword.BackColor = System.Drawing.Color.White;
+            this.labelPassword.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelPassword.Font = new System.Drawing.Font("Cascadia Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(8, 74);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(958, 36);
+            this.labelPassword.TabIndex = 3;
+            this.labelPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 117);
+            this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.buttonCopyPassword);
-            this.Controls.Add(this.textBoxGeneratedPassword);
             this.Controls.Add(this.trackBarLength);
             this.Controls.Add(this.buttonGeneratePassword);
             this.Controls.Add(this.labelLength);
@@ -122,8 +119,8 @@
         private System.Windows.Forms.Label labelLength;
         private System.Windows.Forms.TrackBar trackBarLength;
         private System.Windows.Forms.Button buttonGeneratePassword;
-        private System.Windows.Forms.TextBox textBoxGeneratedPassword;
         private System.Windows.Forms.Button buttonCopyPassword;
+        private System.Windows.Forms.Label labelPassword;
     }
 }
 
