@@ -16,5 +16,3 @@ It targets and requires both Windows and the .NET Framework 4.8.
 
 _If you're using a recent build of Windows 10 the .NET Framework 4.8 should already be installed._
 _If you're using Windows 8.1 and older download: https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-web-installer_
-
-VirusTotal Results: https://www.virustotal.com/gui/file/24f6029e930c4f308e555f7f9b911899f8b6e99dbbc86f0fd922cc00e97e6acc/detection
