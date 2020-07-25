@@ -1,4 +1,4 @@
-# PasswordGenerator 1.0A
+# PasswordGenerator 1.0B
 
 ![Preview](https://raw.githubusercontent.com/hl2guide/PasswordGenerator/master/Screenshots/example.PNG)
 
