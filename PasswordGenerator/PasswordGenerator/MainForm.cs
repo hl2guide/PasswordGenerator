@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
+ * Version: 1.0B Fixes and Changes:
+ * - Uses a more flexible and functional password generation method
+ * 
  * Version: 1.0A Fixes and Changes:
  * - The password result was changed from a TextBox to a Label
  * - The window's title shows more info (status and number of characters)
@@ -15,7 +18,7 @@ namespace PasswordGenerator
     {
         // Variables
         private int passwordLength = 31;
-        private string passwordText = "", appName = "PasswordGenerator", appVersion = "1.0A";
+        private string passwordText = "", appName = "PasswordGenerator", appVersion = "1.0B";
 
         // Constructor
         public MainForm()
@@ -24,7 +27,8 @@ namespace PasswordGenerator
             Text = appName + " " + appVersion;
             trackBarLength.Value = passwordLength;
             labelLength.Text = "Length: " + passwordLength.ToString();
-            labelPassword.Text = GeneratePassword(passwordLength);
+            labelPassword.Text = PasswordGenerator.Generate(passwordLength, (passwordLength / 2), true, true, true, true);
+            //labelPassword.Text = GeneratePassword(passwordLength);
         }
 
         // Scroll on main trackBar
@@ -32,7 +36,8 @@ namespace PasswordGenerator
         {
             passwordLength = trackBarLength.Value;
             labelLength.Text = "Length: " + passwordLength.ToString();
-            passwordText = GeneratePassword(passwordLength);
+            passwordText = PasswordGenerator.Generate(passwordLength, (passwordLength / 2), true, true, true, true);
+            //passwordText = GeneratePassword(passwordLength);
             labelPassword.Text = passwordText;
             buttonCopyPassword.Enabled = true;
             Text = appName + " " + appVersion + " - Generated a Password (" + passwordLength + " characters)";
@@ -43,7 +48,8 @@ namespace PasswordGenerator
         // Click on "Generate Password" button
         private async void buttonGeneratePassword_Click(object sender, EventArgs e)
         {
-            passwordText = GeneratePassword(passwordLength);
+            passwordText = PasswordGenerator.Generate(passwordLength, (passwordLength / 2), true, true, true, true);
+            // passwordText = GeneratePassword(passwordLength);
             labelPassword.Text = passwordText;
             buttonCopyPassword.Enabled = true;
             buttonGeneratePassword.Text = "Generated";
@@ -66,7 +72,7 @@ namespace PasswordGenerator
         }
 
         // Generates a password
-        private static string GeneratePassword(int length = 12)
+        /*private static string GeneratePassword(int length = 12)
         {
             // Creates a string of characters, numbers, special characters that are allowed in the password
             string validChars = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?_-`~<>,./\\;:[]{}()<>=+|";
@@ -81,7 +87,7 @@ namespace PasswordGenerator
                 chars[i] = validChars[random.Next(0, validChars.Length)];
             }
             return new string(chars);
-        }
+        }*/
 
         // Copies a generated password to the Windows Clipboard
         private void CopyToWindowsClipboard(string password)
