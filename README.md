@@ -1,4 +1,4 @@
-# PasswordGenerator 1.0B
+# PasswordGenerator 1.1
 
 ![Preview](https://raw.githubusercontent.com/hl2guide/PasswordGenerator/master/Screenshots/example.PNG)
 
@@ -12,7 +12,6 @@ A tiny C# WinForms app for Windows that generates complex passwords.
 
 ## Requirements
 
-It targets and requires both Windows and the .NET Framework 4.8.
+It targets and requires both Windows and the .NET Framework 5.0.
 
-_If you're using a recent build of Windows 10 the .NET Framework 4.8 should already be installed._
-_If you're using Windows 8.1 and older download: https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net48-web-installer_
+Official Microsoft Download: https://dotnet.microsoft.com/download/dotnet/5.0
