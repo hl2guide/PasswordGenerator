@@ -12,6 +12,6 @@ A tiny C# WinForms app for Windows that generates complex passwords.
 
 ## Requirements
 
-It targets and requires both Windows and the .NET Framework 5.0.
+It targets and requires both Windows and the .NET 5.0.
 
-Official Microsoft Download: https://dotnet.microsoft.com/download/dotnet/5.0
+Official Microsoft Download ".NET Desktop Runtime 5.0.0": https://dotnet.microsoft.com/download/dotnet/5.0
