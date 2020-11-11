@@ -3,10 +3,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
- * Version: 1.0B Fixes and Changes:
+ * Version 1.1 Fixes and Changes:
+ * - Now targets .NET 5.0
+ * Version 1.0C Fixes and Changes:
+ * - Improves initial load display
+ * - Removes backquote from password character pool
+ *
+ * Version 1.0B Fixes and Changes:
  * - Uses a more flexible and functional password generation method
- * 
- * Version: 1.0A Fixes and Changes:
+ *
+ * Version 1.0A Fixes and Changes:
  * - The password result was changed from a TextBox to a Label
  * - The window's title shows more info (status and number of characters)
  *
@@ -18,7 +24,8 @@ namespace PasswordGenerator
     {
         // Variables
         private int passwordLength = 31;
-        private string passwordText = "", appName = "PasswordGenerator", appVersion = "1.0B";
+
+        private string passwordText = "", appName = "PasswordGenerator", appVersion = "1.1";
 
         // Constructor
         public MainForm()
@@ -28,6 +35,7 @@ namespace PasswordGenerator
             trackBarLength.Value = passwordLength;
             labelLength.Text = "Length: " + passwordLength.ToString();
             labelPassword.Text = PasswordGenerator.Generate(passwordLength, (passwordLength / 2), true, true, true, true);
+            Text = appName + " " + appVersion + " - Generated a Password (" + passwordLength + " characters)";
             //labelPassword.Text = GeneratePassword(passwordLength);
         }
 
@@ -68,7 +76,6 @@ namespace PasswordGenerator
             await Task.Delay(5000);
             buttonCopyPassword.Text = "&Copy";
             //Text = appName + " " + appVersion;
-
         }
 
         // Generates a password
